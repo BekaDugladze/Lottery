@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Iceberg', cursive;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px hsla(235, 30%, 90%, 0.80);
+}
+::-webkit-scrollbar-thumb{
+    background-color:#EFBA49;
+    border-radius: 10px;
+}
+body{
+    background: radial-gradient(128.65% 70.71% at 50.00% 50.00%, #CFCB5D 0%, #FF7A00 100%);
+}
+#coin{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.jackpot{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.45);
+    width: fit-content;
+    opacity: 1;
+    z-index: 99;
+    margin: 3% 10%;
+}
+.jackpot h2, h3{
+    padding: 5px;
+    color: #000;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 8px;
+}
+.jackpot h2{
+    border-bottom: #000 3px solid;
+}
+#info{
+    position: relative;
+    z-index: 2;
+    margin: 3% 10%;
+    border-radius: 75%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border: none;
+    cursor: pointer;
+}
+#info img{
+    width: 70px;
+    height: 70px;
+}
+#rules{
+    position: fixed;
+    top: 30%;
+    right: 20%;
+    left: 20%;
+    padding: 30px;
+    background: #EFBA49;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    z-index: 99;
+}
+#rules p {
+    color: #000;
+    font-family: Iceberg;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 7.2px;
+}
+#rules h1{
+    font-weight: bolder;
+    font-size: 35px;
+    letter-spacing: 7.2px;
+}
+#X{
+    margin-top: 25px;
+    padding: 2px 5px ;
+    border-radius: 75%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background-color: red;
+    font-size: 20px;
+    color: #FFF;
+}
+main{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.yourChoice{
+    position: relative;
+    z-index: 2;
+    background-color: #FFF;
+    border-radius: 25px;
+    padding: 5px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    transition: 1s;
+    width: 40%;
+}
+.yourChoice h2{
+    font-size: 27px;
+}
+#chosenByYou{
+    margin-left: 5px;
+}
+.handle{
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 2;
+}
+.handleButton{
+    padding: 7px 15px;
+    border: none;
+    border-radius: 75%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.handleButton span{
+    scale: 1.3;
+    color: white;
+}
+#delete{
+    background-color: #F00;
+}
+#refresh, #reload{
+    background-color:#FF7A00;
+}
+#reload{
+    margin: 15px auto;
+}
+#done{
+    background-color: green;
+}
+.numbers{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 40px 0 40px;
+    flex-wrap: nowrap;
+}
+.red{
+    background-color: #F00;
+    border: 5px solid white;
+    padding: 5px 10px;
+    border-radius: 75%;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px;
+}
+.blue{
+    background-color: blue;
+    border: 5px solid white;
+    padding: 5px 10px;
+    border-radius: 75%;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px;
+}
+.pink{
+    background-color: rgb(233, 70, 192);
+    border: 5px solid white;
+    padding: 5px 10px;
+    border-radius: 75%;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px;
+}
+.green{
+    background-color: green;
+    border: 5px solid white;
+    padding: 5px 10px;
+    border-radius: 75%;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px;
+}
+.yellow{
+    background-color: rgba(255, 153, 0, 1);
+    border: 5px solid white;
+    padding: 5px 10px;
+    border-radius: 75%;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px;
+}
+.aiChoice{
+    position: relative;
+    z-index: 2;
+    background-color: #FFF;
+    border-radius: 25px;
+    padding: 5px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    transition: 1s;
+    width: 40%;
+    margin: 3% auto ;
+}
+.aiChoice h2{
+    font-size: 27px;
+}
+#chosenByAI{
+    margin-left: 5px;
+}
+#won{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    display: none; /*change*/
+}
+#lost{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    display: none; /*change*/
+}
+#reload{
+    display: none; /*change*/
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+@media screen and (min-width:450px ) and (max-width: 800px){
+    main{
+        margin: 40% auto 0 auto;
+    }
+    .yourChoice{
+        width: 60%;
+    }
+    .aiChoice{
+        width: 60%;
+    }
+    .numbers{
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        margin: 3px 5px;
+    }
+    .container{
+        margin: 60px auto;
+    }
+    .handle{
+        margin-top: 50px;
+    }
+    header{
+        margin-top: 10%;
+    }
+}

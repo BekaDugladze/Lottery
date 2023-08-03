@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.75 minimum-scale=0.6 maximum-scale=1">
+        <meta name="google-site-verification">
+        <meta name="description" content="Lottery is a game in which, the Player should choose 5 numbers, if the chosen numbers by player and AI are the same, the player will win the Jackpot.
+        else AI is winner and 100 coins will add to the Jackpot">
+        <meta name="keywords" content="Lottery, Jackpot, game, winning, hazard, play, guess, million">
+        <title>Lottery</title>
+        <link rel="icon" href="./resources/Component 1.png">
+        <link rel="stylesheet" href="./index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    </head>
+    <body>
+        <section>
+            <img id="coin" src="./resources/coin.png" alt="million">
+            <header>
+                <div class="jackpot">
+                    <h2>Jackpot</h2>
+                    <h3 id="Jackpot">0</h3>
+                </div>
+                <button id="info">
+                    <img src="./resources/Information button.png" alt="info about Lottery">
+                </button>
+                <div id="rules">
+                    <h1>rules</h1>
+                    <p><br>Lottery is a game in which, the Player should choose 5 numbers, if the chosen numbers by player and AI are the same, the player will win the Jackpot.
+                      <br><br>  else, AI is winner and 100 coins will add to the Jackpot balance</p>
+                      <button id="X">X</button>
+
+                      <script src="./info.js"></script>
+                </div>
+            </header>
+            <main>
+                <div class="yourChoice">
+                    <h2>Your Choice:</h2>
+                    <h3 id="chosenByYou"></h3>
+                </div>
+                <div class="handle">
+                    <button class="handleButton" id="refresh">
+                        <span class="material-symbols-outlined">
+                            refresh
+                        </span>
+                    </button>
+                    <button class="handleButton" id="done">
+                        <span class="material-symbols-outlined">
+                            done
+                        </span>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="numbers">
+                        <button class="red" data-number="1">1</button>
+                        <button class="blue" data-number="2">2</button>
+                        <button class="pink" data-number="3">3</button>
+                        <button class="green" data-number="4">4</button>
+                        <button class="yellow" data-number="5">5</button>
+                        <button class="red" data-number="6">6</button>
+                        <button class="blue" data-number="7">7</button>
+                        <button class="pink" data-number="8">8</button>
+                        <button class="green" data-number="9">9</button>
+                        <button class="yellow" data-number="10">10</button>
+                    </div>
+                    <div class="numbers">
+                        <button class="red" data-number="11">11</button>
+                        <button class="blue" data-number="12">12</button>
+                        <button class="pink" data-number="13">13</button>
+                        <button class="green" data-number="14">14</button>
+                        <button class="yellow" data-number="15">15</button>
+                        <button class="red" data-number="16">16</button>
+                        <button class="blue" data-number="17">17</button>
+                        <button class="pink" data-number="18">18</button>
+                        <button class="green" data-number="19">19</button>
+                        <button class="yellow" data-number="20">20</button>
+                    </div>
+                    <div class="numbers">
+                        <button class="red" data-number="21">21</button>
+                        <button class="blue" data-number="22">22</button>
+                        <button class="pink" data-number="23">23</button>
+                        <button class="green" data-number="24">24</button>
+                        <button class="yellow" data-number="25">25</button>
+                        <button class="red" data-number="26">26</button>
+                        <button class="blue" data-number="27">27</button>
+                        <button class="pink" data-number="28">28</button>
+                        <button class="green" data-number="29">29</button>
+                        <button class="yellow" data-number="30">30</button>
+                    </div>
+                </div>
+                <div class="aiChoice">
+                    <h2>AI's Choice:</h2>
+                    <h3 id="chosenByAI"></h3>
+                </div>
+                <h1 id="won">You Won!</h1>
+                <h1 id="lost">You Lost!</h1>
+                <button class="handleButton" id="reload">
+                    <span class="material-symbols-outlined">
+                        refresh
+                    </span>
+                </button>
+            </main>
+        </section>
+        <script src="./gameplay.js"></script>
+    </body>
+</html>
